@@ -2,8 +2,6 @@ function pivotIndex(nums) {
   let leftEdge = 0;
   let rightEdge = nums.slice(1).reduce((acc, val) => acc + val, 0);
   for (let i = 0; i < nums.length; i++) {
-    // set rightEdge to 0 if iterating over the last index of nums.
-    rightEdge = i === nums.length - 1 ? 0 : rightEdge;
     // return if current index is the pivot
     if (leftEdge === rightEdge) {
       return i;
